@@ -1,0 +1,807 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		134D0EB32E72AA4F00DB4DB2 /* Follo_AIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D0EB22E72AA4F00DB4DB2 /* Follo_AIApp.swift */; };
+		134D0EB52E72AA4F00DB4DB2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D0EB42E72AA4F00DB4DB2 /* ContentView.swift */; };
+		134D0EB72E72AA5000DB4DB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 134D0EB62E72AA5000DB4DB2 /* Assets.xcassets */; };
+		134D0EBA2E72AA5000DB4DB2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 134D0EB92E72AA5000DB4DB2 /* Preview Assets.xcassets */; };
+		134D0EC42E72AA5000DB4DB2 /* Follo_AITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D0EC32E72AA5000DB4DB2 /* Follo_AITests.swift */; };
+		134D0ECE2E72AA5000DB4DB2 /* Follo_AIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D0ECD2E72AA5000DB4DB2 /* Follo_AIUITests.swift */; };
+		134D0ED02E72AA5000DB4DB2 /* Follo_AIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D0ECF2E72AA5000DB4DB2 /* Follo_AIUITestsLaunchTests.swift */; };
+		A1B2C3D405E6478F90120394 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F5E678912345AB67890123 /* OpenAIService.swift */; };
+		C2250FCA2E6EE4A1002BC625 /* AssistantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2250FC72E6EE4A1002BC625 /* AssistantsView.swift */; };
+		C2250FCB2E6EE4A1002BC625 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2250FC92E6EE4A1002BC625 /* StatusView.swift */; };
+		C2250FCC2E6EE4A1002BC625 /* QuickCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2250FC82E6EE4A1002BC625 /* QuickCreateView.swift */; };
+		C231DA722EDAF3BB00FAA1F1 /* TriggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C231DA712EDAF3BB00FAA1F1 /* TriggerManager.swift */; };
+		C231DA742EDAF57600FAA1F1 /* change_location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C231DA732EDAF57600FAA1F1 /* change_location.gpx */; };
+		C253EB342E87EF5A007AE00A /* EventLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C253EB332E87EF5A007AE00A /* EventLocator.swift */; };
+		C2630AC62E698290001D55D9 /* EventEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2630AC52E698290001D55D9 /* EventEditView.swift */; };
+		C273A4B62E61629F00AFD6ED /* DayViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C273A4B52E61629F00AFD6ED /* DayViewScreen.swift */; };
+		C27B69D62EB34E5700767FB8 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B69D52EB34E5700767FB8 /* KeychainService.swift */; };
+		C27B69E02EB8C55D00767FB8 /* EventSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B69DE2EB8C55D00767FB8 /* EventSyncManager.swift */; };
+		C27B69E62EBE395500767FB8 /* ContextCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B69E12EBE395500767FB8 /* ContextCollector.swift */; };
+		C27B69E72EBE395500767FB8 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B69E42EBE395500767FB8 /* WeatherService.swift */; };
+		C27B69E82EBE395500767FB8 /* ScheduleAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B69E22EBE395500767FB8 /* ScheduleAnalyzer.swift */; };
+		C27B69E92EBE395500767FB8 /* TrafficService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B69E32EBE395500767FB8 /* TrafficService.swift */; };
+		C27B69EB2EBF458400767FB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B69EA2EBF458400767FB8 /* AppDelegate.swift */; };
+		C27B69ED2EBF45B100767FB8 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B69EC2EBF45B100767FB8 /* ReminderService.swift */; };
+		C29CD4BA2E7EF86400C09667 /* GlobalEventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29CD4B92E7EF86400C09667 /* GlobalEventStore.swift */; };
+		C2A9C2CD2E7021D4001A7A6F /* AssistantChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A9C2CC2E7021D4001A7A6F /* AssistantChatView.swift */; };
+		C2C64C3A2EB0A4D700353346 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C64C372EB0A4D700353346 /* LoginView.swift */; };
+		C2C64C3B2EB0A4D700353346 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C64C382EB0A4D700353346 /* UserSession.swift */; };
+		C2C64C3C2EB0A4D700353346 /* AppleSignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C64C362EB0A4D700353346 /* AppleSignInManager.swift */; };
+		C2C64C8D2EB257C100353346 /* BackendAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C64C8B2EB257C100353346 /* BackendAPIService.swift */; };
+		C2E8825E2E615F7800AFFF30 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E8825D2E615F7800AFFF30 /* CalendarView.swift */; };
+		C2FEA3492EE298330077A383 /* TokenRefreshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FEA3482EE298330077A383 /* TokenRefreshManager.swift */; };
+		C2FEA34B2EE299210077A383 /* TriggerDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FEA34A2EE299210077A383 /* TriggerDebugView.swift */; };
+		F8BC4C09315F4BACB21F3FF8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C950AE81E1744078140E88D /* DataManager.swift */; };
+		L5A7B9C8345E678F90234567 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = M6B8C0D9456F789A01345678 /* LocationService.swift */; };
+		V1C2D3E456F789AB01234567 /* VoiceChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = W2D4E5F567890ABC12345678 /* VoiceChatService.swift */; };
+		X3E5F6G678901BCD23456789 /* VoiceChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y4F6G7H789012CDE34567890 /* VoiceChatView.swift */; };
+		Z5G7H8I890123DEF45678901 /* TimeZoneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6H8I9J901234EFG56789012 /* TimeZoneManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		134D0EC02E72AA5000DB4DB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 134D0EA72E72AA4F00DB4DB2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 134D0EAE2E72AA4F00DB4DB2;
+			remoteInfo = "Follo AI";
+		};
+		134D0ECA2E72AA5000DB4DB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 134D0EA72E72AA4F00DB4DB2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 134D0EAE2E72AA4F00DB4DB2;
+			remoteInfo = "Follo AI";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		134D0EAF2E72AA4F00DB4DB2 /* Follo AI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Follo AI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		134D0EB22E72AA4F00DB4DB2 /* Follo_AIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follo_AIApp.swift; sourceTree = "<group>"; };
+		134D0EB42E72AA4F00DB4DB2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		134D0EB62E72AA5000DB4DB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		134D0EB92E72AA5000DB4DB2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		134D0EBF2E72AA5000DB4DB2 /* Follo AITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Follo AITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		134D0EC32E72AA5000DB4DB2 /* Follo_AITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follo_AITests.swift; sourceTree = "<group>"; };
+		134D0EC92E72AA5000DB4DB2 /* Follo AIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Follo AIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		134D0ECD2E72AA5000DB4DB2 /* Follo_AIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follo_AIUITests.swift; sourceTree = "<group>"; };
+		134D0ECF2E72AA5000DB4DB2 /* Follo_AIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follo_AIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13C5585B2E5960E200FDD2EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		13E06B5D2E71EE170009BF9F /* Follo AI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Follo AI.entitlements"; sourceTree = "<group>"; };
+		8C950AE81E1744078140E88D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		A6H8I9J901234EFG56789012 /* TimeZoneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneManager.swift; sourceTree = "<group>"; };
+		B4F5E678912345AB67890123 /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
+		C2250FC72E6EE4A1002BC625 /* AssistantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantsView.swift; sourceTree = "<group>"; };
+		C2250FC82E6EE4A1002BC625 /* QuickCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCreateView.swift; sourceTree = "<group>"; };
+		C2250FC92E6EE4A1002BC625 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		C231DA712EDAF3BB00FAA1F1 /* TriggerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerManager.swift; sourceTree = "<group>"; };
+		C231DA732EDAF57600FAA1F1 /* change_location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = change_location.gpx; sourceTree = "<group>"; };
+		C253EB332E87EF5A007AE00A /* EventLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLocator.swift; sourceTree = "<group>"; };
+		C2630AC52E698290001D55D9 /* EventEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditView.swift; sourceTree = "<group>"; };
+		C273A4B52E61629F00AFD6ED /* DayViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewScreen.swift; sourceTree = "<group>"; };
+		C27B69D52EB34E5700767FB8 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		C27B69DE2EB8C55D00767FB8 /* EventSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSyncManager.swift; sourceTree = "<group>"; };
+		C27B69E12EBE395500767FB8 /* ContextCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextCollector.swift; sourceTree = "<group>"; };
+		C27B69E22EBE395500767FB8 /* ScheduleAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAnalyzer.swift; sourceTree = "<group>"; };
+		C27B69E32EBE395500767FB8 /* TrafficService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficService.swift; sourceTree = "<group>"; };
+		C27B69E42EBE395500767FB8 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		C27B69EA2EBF458400767FB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C27B69EC2EBF45B100767FB8 /* ReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
+		C29CD4B92E7EF86400C09667 /* GlobalEventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEventStore.swift; sourceTree = "<group>"; };
+		C2A9C2CC2E7021D4001A7A6F /* AssistantChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantChatView.swift; sourceTree = "<group>"; };
+		C2C64C362EB0A4D700353346 /* AppleSignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInManager.swift; sourceTree = "<group>"; };
+		C2C64C372EB0A4D700353346 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C2C64C382EB0A4D700353346 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		C2C64C8B2EB257C100353346 /* BackendAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendAPIService.swift; sourceTree = "<group>"; };
+		C2E8825D2E615F7800AFFF30 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		C2FEA3482EE298330077A383 /* TokenRefreshManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRefreshManager.swift; sourceTree = "<group>"; };
+		C2FEA34A2EE299210077A383 /* TriggerDebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerDebugView.swift; sourceTree = "<group>"; };
+		M6B8C0D9456F789A01345678 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		W2D4E5F567890ABC12345678 /* VoiceChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceChatService.swift; sourceTree = "<group>"; };
+		Y4F6G7H789012CDE34567890 /* VoiceChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceChatView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		134D0EAC2E72AA4F00DB4DB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		134D0EBC2E72AA5000DB4DB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		134D0EC62E72AA5000DB4DB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		134D0EA62E72AA4F00DB4DB2 = {
+			isa = PBXGroup;
+			children = (
+				134D0EB12E72AA4F00DB4DB2 /* Follo AI */,
+				134D0EC22E72AA5000DB4DB2 /* Follo AITests */,
+				134D0ECC2E72AA5000DB4DB2 /* Follo AIUITests */,
+				134D0EB02E72AA4F00DB4DB2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		134D0EB02E72AA4F00DB4DB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				134D0EAF2E72AA4F00DB4DB2 /* Follo AI.app */,
+				134D0EBF2E72AA5000DB4DB2 /* Follo AITests.xctest */,
+				134D0EC92E72AA5000DB4DB2 /* Follo AIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		134D0EB12E72AA4F00DB4DB2 /* Follo AI */ = {
+			isa = PBXGroup;
+			children = (
+				C2FEA34A2EE299210077A383 /* TriggerDebugView.swift */,
+				C231DA732EDAF57600FAA1F1 /* change_location.gpx */,
+				C27B69EA2EBF458400767FB8 /* AppDelegate.swift */,
+				C27B69DF2EB8C55D00767FB8 /* Services */,
+				C2C64C8C2EB257C100353346 /* Network */,
+				13E06B5D2E71EE170009BF9F /* Follo AI.entitlements */,
+				C2A9C2CC2E7021D4001A7A6F /* AssistantChatView.swift */,
+				C2250FC72E6EE4A1002BC625 /* AssistantsView.swift */,
+				C2250FC82E6EE4A1002BC625 /* QuickCreateView.swift */,
+				C2250FC92E6EE4A1002BC625 /* StatusView.swift */,
+				C2630AC92E699344001D55D9 /* AI */,
+				C2630AC82E69932E001D55D9 /* Voice */,
+				C2630AC72E69930F001D55D9 /* calendar */,
+				13C5585B2E5960E200FDD2EB /* Info.plist */,
+				134D0EB22E72AA4F00DB4DB2 /* Follo_AIApp.swift */,
+				134D0EB42E72AA4F00DB4DB2 /* ContentView.swift */,
+				134D0EB62E72AA5000DB4DB2 /* Assets.xcassets */,
+				134D0EB82E72AA5000DB4DB2 /* Preview Content */,
+				C2C64C392EB0A4D700353346 /* Auth */,
+			);
+			path = "Follo AI";
+			sourceTree = "<group>";
+		};
+		134D0EB82E72AA5000DB4DB2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				134D0EB92E72AA5000DB4DB2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		134D0EC22E72AA5000DB4DB2 /* Follo AITests */ = {
+			isa = PBXGroup;
+			children = (
+				134D0EC32E72AA5000DB4DB2 /* Follo_AITests.swift */,
+			);
+			path = "Follo AITests";
+			sourceTree = "<group>";
+		};
+		134D0ECC2E72AA5000DB4DB2 /* Follo AIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				134D0ECD2E72AA5000DB4DB2 /* Follo_AIUITests.swift */,
+				134D0ECF2E72AA5000DB4DB2 /* Follo_AIUITestsLaunchTests.swift */,
+			);
+			path = "Follo AIUITests";
+			sourceTree = "<group>";
+		};
+		C2630AC72E69930F001D55D9 /* calendar */ = {
+			isa = PBXGroup;
+			children = (
+				C29CD4B92E7EF86400C09667 /* GlobalEventStore.swift */,
+				C2630AC52E698290001D55D9 /* EventEditView.swift */,
+				C273A4B52E61629F00AFD6ED /* DayViewScreen.swift */,
+				C2E8825D2E615F7800AFFF30 /* CalendarView.swift */,
+			);
+			path = calendar;
+			sourceTree = "<group>";
+		};
+		C2630AC82E69932E001D55D9 /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+				W2D4E5F567890ABC12345678 /* VoiceChatService.swift */,
+				Y4F6G7H789012CDE34567890 /* VoiceChatView.swift */,
+			);
+			path = Voice;
+			sourceTree = "<group>";
+		};
+		C2630AC92E699344001D55D9 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				8C950AE81E1744078140E88D /* DataManager.swift */,
+				M6B8C0D9456F789A01345678 /* LocationService.swift */,
+				B4F5E678912345AB67890123 /* OpenAIService.swift */,
+				A6H8I9J901234EFG56789012 /* TimeZoneManager.swift */,
+				C253EB332E87EF5A007AE00A /* EventLocator.swift */,
+				C27B69E52EBE395500767FB8 /* Context */,
+			);
+			path = AI;
+			sourceTree = "<group>";
+		};
+		C27B69DF2EB8C55D00767FB8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C27B69EC2EBF45B100767FB8 /* ReminderService.swift */,
+				C27B69DE2EB8C55D00767FB8 /* EventSyncManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C27B69E52EBE395500767FB8 /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				C231DA712EDAF3BB00FAA1F1 /* TriggerManager.swift */,
+				C27B69E12EBE395500767FB8 /* ContextCollector.swift */,
+				C27B69E22EBE395500767FB8 /* ScheduleAnalyzer.swift */,
+				C27B69E32EBE395500767FB8 /* TrafficService.swift */,
+				C27B69E42EBE395500767FB8 /* WeatherService.swift */,
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		C2C64C392EB0A4D700353346 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				C2FEA3482EE298330077A383 /* TokenRefreshManager.swift */,
+				C27B69D52EB34E5700767FB8 /* KeychainService.swift */,
+				C2C64C362EB0A4D700353346 /* AppleSignInManager.swift */,
+				C2C64C372EB0A4D700353346 /* LoginView.swift */,
+				C2C64C382EB0A4D700353346 /* UserSession.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		C2C64C8C2EB257C100353346 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C2C64C8B2EB257C100353346 /* BackendAPIService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		134D0EAE2E72AA4F00DB4DB2 /* Follo AI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 134D0ED32E72AA5000DB4DB2 /* Build configuration list for PBXNativeTarget "Follo AI" */;
+			buildPhases = (
+				134D0EAB2E72AA4F00DB4DB2 /* Sources */,
+				134D0EAC2E72AA4F00DB4DB2 /* Frameworks */,
+				134D0EAD2E72AA4F00DB4DB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Follo AI";
+			productName = "Follo AI";
+			productReference = 134D0EAF2E72AA4F00DB4DB2 /* Follo AI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		134D0EBE2E72AA5000DB4DB2 /* Follo AITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 134D0ED62E72AA5000DB4DB2 /* Build configuration list for PBXNativeTarget "Follo AITests" */;
+			buildPhases = (
+				134D0EBB2E72AA5000DB4DB2 /* Sources */,
+				134D0EBC2E72AA5000DB4DB2 /* Frameworks */,
+				134D0EBD2E72AA5000DB4DB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				134D0EC12E72AA5000DB4DB2 /* PBXTargetDependency */,
+			);
+			name = "Follo AITests";
+			productName = "Follo AITests";
+			productReference = 134D0EBF2E72AA5000DB4DB2 /* Follo AITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		134D0EC82E72AA5000DB4DB2 /* Follo AIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 134D0ED92E72AA5000DB4DB2 /* Build configuration list for PBXNativeTarget "Follo AIUITests" */;
+			buildPhases = (
+				134D0EC52E72AA5000DB4DB2 /* Sources */,
+				134D0EC62E72AA5000DB4DB2 /* Frameworks */,
+				134D0EC72E72AA5000DB4DB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				134D0ECB2E72AA5000DB4DB2 /* PBXTargetDependency */,
+			);
+			name = "Follo AIUITests";
+			productName = "Follo AIUITests";
+			productReference = 134D0EC92E72AA5000DB4DB2 /* Follo AIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		134D0EA72E72AA4F00DB4DB2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					134D0EAE2E72AA4F00DB4DB2 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					134D0EBE2E72AA5000DB4DB2 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 134D0EAE2E72AA4F00DB4DB2;
+					};
+					134D0EC82E72AA5000DB4DB2 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 134D0EAE2E72AA4F00DB4DB2;
+					};
+				};
+			};
+			buildConfigurationList = 134D0EAA2E72AA4F00DB4DB2 /* Build configuration list for PBXProject "Follo AI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 134D0EA62E72AA4F00DB4DB2;
+			productRefGroup = 134D0EB02E72AA4F00DB4DB2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				134D0EAE2E72AA4F00DB4DB2 /* Follo AI */,
+				134D0EBE2E72AA5000DB4DB2 /* Follo AITests */,
+				134D0EC82E72AA5000DB4DB2 /* Follo AIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		134D0EAD2E72AA4F00DB4DB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				134D0EBA2E72AA5000DB4DB2 /* Preview Assets.xcassets in Resources */,
+				134D0EB72E72AA5000DB4DB2 /* Assets.xcassets in Resources */,
+				C231DA742EDAF57600FAA1F1 /* change_location.gpx in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		134D0EBD2E72AA5000DB4DB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		134D0EC72E72AA5000DB4DB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		134D0EAB2E72AA4F00DB4DB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C27B69E62EBE395500767FB8 /* ContextCollector.swift in Sources */,
+				C27B69E72EBE395500767FB8 /* WeatherService.swift in Sources */,
+				C27B69E82EBE395500767FB8 /* ScheduleAnalyzer.swift in Sources */,
+				C27B69E92EBE395500767FB8 /* TrafficService.swift in Sources */,
+				C27B69EB2EBF458400767FB8 /* AppDelegate.swift in Sources */,
+				134D0EB52E72AA4F00DB4DB2 /* ContentView.swift in Sources */,
+				C29CD4BA2E7EF86400C09667 /* GlobalEventStore.swift in Sources */,
+				C2FEA34B2EE299210077A383 /* TriggerDebugView.swift in Sources */,
+				F8BC4C09315F4BACB21F3FF8 /* DataManager.swift in Sources */,
+				C27B69ED2EBF45B100767FB8 /* ReminderService.swift in Sources */,
+				C2E8825E2E615F7800AFFF30 /* CalendarView.swift in Sources */,
+				C2A9C2CD2E7021D4001A7A6F /* AssistantChatView.swift in Sources */,
+				C2630AC62E698290001D55D9 /* EventEditView.swift in Sources */,
+				L5A7B9C8345E678F90234567 /* LocationService.swift in Sources */,
+				C253EB342E87EF5A007AE00A /* EventLocator.swift in Sources */,
+				A1B2C3D405E6478F90120394 /* OpenAIService.swift in Sources */,
+				V1C2D3E456F789AB01234567 /* VoiceChatService.swift in Sources */,
+				X3E5F6G678901BCD23456789 /* VoiceChatView.swift in Sources */,
+				C2250FCA2E6EE4A1002BC625 /* AssistantsView.swift in Sources */,
+				C2C64C8D2EB257C100353346 /* BackendAPIService.swift in Sources */,
+				C2250FCB2E6EE4A1002BC625 /* StatusView.swift in Sources */,
+				C2C64C3A2EB0A4D700353346 /* LoginView.swift in Sources */,
+				C2FEA3492EE298330077A383 /* TokenRefreshManager.swift in Sources */,
+				C27B69D62EB34E5700767FB8 /* KeychainService.swift in Sources */,
+				C2C64C3B2EB0A4D700353346 /* UserSession.swift in Sources */,
+				C27B69E02EB8C55D00767FB8 /* EventSyncManager.swift in Sources */,
+				C2C64C3C2EB0A4D700353346 /* AppleSignInManager.swift in Sources */,
+				C2250FCC2E6EE4A1002BC625 /* QuickCreateView.swift in Sources */,
+				134D0EB32E72AA4F00DB4DB2 /* Follo_AIApp.swift in Sources */,
+				C273A4B62E61629F00AFD6ED /* DayViewScreen.swift in Sources */,
+				C231DA722EDAF3BB00FAA1F1 /* TriggerManager.swift in Sources */,
+				Z5G7H8I890123DEF45678901 /* TimeZoneManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		134D0EBB2E72AA5000DB4DB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				134D0EC42E72AA5000DB4DB2 /* Follo_AITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		134D0EC52E72AA5000DB4DB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				134D0ED02E72AA5000DB4DB2 /* Follo_AIUITestsLaunchTests.swift in Sources */,
+				134D0ECE2E72AA5000DB4DB2 /* Follo_AIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		134D0EC12E72AA5000DB4DB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 134D0EAE2E72AA4F00DB4DB2 /* Follo AI */;
+			targetProxy = 134D0EC02E72AA5000DB4DB2 /* PBXContainerItemProxy */;
+		};
+		134D0ECB2E72AA5000DB4DB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 134D0EAE2E72AA4F00DB4DB2 /* Follo AI */;
+			targetProxy = 134D0ECA2E72AA5000DB4DB2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		134D0ED12E72AA5000DB4DB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		134D0ED22E72AA5000DB4DB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		134D0ED42E72AA5000DB4DB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Follo AI/Follo AI.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Follo AI/Preview Content\"";
+				DEVELOPMENT_TEAM = 4KFWGWA3MG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Follo AI/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Follo AI";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "需要访问您的日历以分析日程安排";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "需要访问本地网络以识别WiFi连接状态";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "需要获取您的位置信息以提供个性化服务，包括识别WiFi网络和后台位置追踪";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "需要获取您的位置信息以提供个性化服务，包括识别WiFi网络和后台位置追踪";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "需要获取您的位置信息以提供个性化服务";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要访问麦克风以检测环境音量水平";
+				INFOPLIST_KEY_NSMotionUsageDescription = "需要访问您的运动活动信息以分析您的行为模式";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "需要语音识别功能以将您的语音转换为文字。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIBackgroundModes = "location remote-notification";
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.5.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jayzou.Folloai;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		134D0ED52E72AA5000DB4DB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Follo AI/Follo AI.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Follo AI/Preview Content\"";
+				DEVELOPMENT_TEAM = 4KFWGWA3MG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Follo AI/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Follo AI";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "需要访问您的日历以分析日程安排";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "需要访问本地网络以识别WiFi连接状态";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "需要获取您的位置信息以提供个性化服务，包括识别WiFi网络和后台位置追踪";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "需要获取您的位置信息以提供个性化服务，包括识别WiFi网络和后台位置追踪";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "需要获取您的位置信息以提供个性化服务";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要访问麦克风以检测环境音量水平";
+				INFOPLIST_KEY_NSMotionUsageDescription = "需要访问您的运动活动信息以分析您的行为模式";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "需要语音识别功能以将您的语音转换为文字。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIBackgroundModes = "location remote-notification";
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.5.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jayzou.Folloai;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		134D0ED72E72AA5000DB4DB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4KFWGWA3MG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jayzou.Follo-AITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Follo AI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Follo AI";
+			};
+			name = Debug;
+		};
+		134D0ED82E72AA5000DB4DB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4KFWGWA3MG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jayzou.Follo-AITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Follo AI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Follo AI";
+			};
+			name = Release;
+		};
+		134D0EDA2E72AA5000DB4DB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4KFWGWA3MG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jayzou.Follo-AIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Follo AI";
+			};
+			name = Debug;
+		};
+		134D0EDB2E72AA5000DB4DB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4KFWGWA3MG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jayzou.Follo-AIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Follo AI";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		134D0EAA2E72AA4F00DB4DB2 /* Build configuration list for PBXProject "Follo AI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				134D0ED12E72AA5000DB4DB2 /* Debug */,
+				134D0ED22E72AA5000DB4DB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		134D0ED32E72AA5000DB4DB2 /* Build configuration list for PBXNativeTarget "Follo AI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				134D0ED42E72AA5000DB4DB2 /* Debug */,
+				134D0ED52E72AA5000DB4DB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		134D0ED62E72AA5000DB4DB2 /* Build configuration list for PBXNativeTarget "Follo AITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				134D0ED72E72AA5000DB4DB2 /* Debug */,
+				134D0ED82E72AA5000DB4DB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		134D0ED92E72AA5000DB4DB2 /* Build configuration list for PBXNativeTarget "Follo AIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				134D0EDA2E72AA5000DB4DB2 /* Debug */,
+				134D0EDB2E72AA5000DB4DB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 134D0EA72E72AA4F00DB4DB2 /* Project object */;
+}
