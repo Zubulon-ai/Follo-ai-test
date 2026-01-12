@@ -4,10 +4,10 @@
 <dict>
 	<key>BackendAPIURL</key>
 	<string>http://47.100.124.189:8000</string>
+	<key>DashScopeAPIKey</key>
+	<string>sk-13b14a4a9a4747438e66fba704fe5e60</string>
 	<key>DirectDashScopeEnabled</key>
 	<true/>
-	<key>DashScopeAPIKey</key>
-	<string>sk-YOUR_API_KEY_HERE</string>
 	<key>DashScopeBaseURL</key>
 	<string>https://dashscope.aliyuncs.com</string>
 	<key>DashScopeAppCompletionPathTemplate</key>

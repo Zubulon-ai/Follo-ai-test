@@ -194,8 +194,12 @@ public class ContextCollector {
         let steps = await getTodaySteps()
         
         // 7. Battery
-        UIDevice.current.isBatteryMonitoringEnabled = true
-        let battery = Double(UIDevice.current.batteryLevel)
+        await MainActor.run {
+            UIDevice.current.isBatteryMonitoringEnabled = true
+        }
+        let battery = await MainActor.run {
+            Double(UIDevice.current.batteryLevel)
+        }
         
         return ContextSnapshot(
             current_time: fmtTime.string(from: now),

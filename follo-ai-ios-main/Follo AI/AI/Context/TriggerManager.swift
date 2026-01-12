@@ -128,7 +128,7 @@ class TriggerManager: NSObject, ObservableObject {
         }
         
         var taskId: UIBackgroundTaskIdentifier = .invalid
-        taskId = UIApplication.shared.beginBackgroundTask {
+        taskId = await UIApplication.shared.beginBackgroundTask {
             UIApplication.shared.endBackgroundTask(taskId)
         }
         
@@ -147,8 +147,8 @@ class TriggerManager: NSObject, ObservableObject {
                 lastTriggerStatus = "手动测试失败: \(error.localizedDescription)"
             }
         }
-        
-        UIApplication.shared.endBackgroundTask(taskId)
+
+        await UIApplication.shared.endBackgroundTask(taskId)
     }
     
     /// 获取当前状态摘要
@@ -270,7 +270,7 @@ class TriggerManager: NSObject, ObservableObject {
         
         // 2. Start Background Task
         var taskId: UIBackgroundTaskIdentifier = .invalid
-        taskId = UIApplication.shared.beginBackgroundTask {
+        taskId = await UIApplication.shared.beginBackgroundTask {
             print("⚠️ [TriggerManager] Background task expiring!")
             UIApplication.shared.endBackgroundTask(taskId)
         }
@@ -332,9 +332,9 @@ class TriggerManager: NSObject, ObservableObject {
              print("⚠️ [TriggerManager] No location available after upload, requesting location for tether update...")
              locationManager.requestLocation()
         }
-        
+
         print("🏁 [TriggerManager] Wake-up handling complete.")
-        UIApplication.shared.endBackgroundTask(taskId)
+        await UIApplication.shared.endBackgroundTask(taskId)
     }
     
     /// 尝试刷新 Token

@@ -272,6 +272,7 @@ struct UICalendarRepresentable: UIViewRepresentable {
         Coordinator(provider: provider)
     }
 
+    @MainActor
     final class Coordinator: NSObject, UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate {
         let provider: CalendarEventProvider
         init(provider: CalendarEventProvider) { self.provider = provider }
@@ -283,7 +284,7 @@ struct UICalendarRepresentable: UIViewRepresentable {
             if provider.visibleMonth?.year != monthComps.year || provider.visibleMonth?.month != monthComps.month {
                 // Only update if the date belongs to the currently visible month to avoid flickering
                 if calendarView.visibleDateComponents.month == dateComponents.month {
-                    DispatchQueue.main.async { withAnimation(nil) { self.provider.visibleMonth = monthComps } }
+                    withAnimation(nil) { self.provider.visibleMonth = monthComps }
                 }
             }
             guard let events = provider.eventsByDay[dateComponents], !events.isEmpty else { return nil }
@@ -298,7 +299,7 @@ struct UICalendarRepresentable: UIViewRepresentable {
         @available(iOS 17.0, *)
         func calendarViewDidChangeVisibleDateComponents(_ calendarView: UICalendarView) {
             let comps = calendarView.visibleDateComponents
-            DispatchQueue.main.async { withAnimation(nil) { self.provider.visibleMonth = DateComponents(year: comps.year, month: comps.month) } }
+            withAnimation(nil) { self.provider.visibleMonth = DateComponents(year: comps.year, month: comps.month) }
         }
 
         // Selection handling

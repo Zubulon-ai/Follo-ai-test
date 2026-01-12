@@ -1043,13 +1043,22 @@ class VoiceChatService: NSObject, ObservableObject {
 
     private func awaitResult<T>(_ block: @escaping () async -> T) -> T? {
         let semaphore = DispatchSemaphore(value: 0)
-        var result: T?
+        let resultBox = Box<T?>(nil)
         Task {
-            result = await block()
+            let value = await block()
+            resultBox.value = value
             semaphore.signal()
         }
         semaphore.wait()
-        return result
+        return resultBox.value
+    }
+
+    // Helper class to avoid concurrent mutation
+    private class Box<T> {
+        var value: T
+        init(_ value: T) {
+            self.value = value
+        }
     }
 
     func confirmModify(action: String, candidateId: String, occurrenceStart: Date?, changes: ModifyParserResult.Changes?) {

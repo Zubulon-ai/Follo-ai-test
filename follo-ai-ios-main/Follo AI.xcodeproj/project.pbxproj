@@ -14,6 +14,12 @@
 		134D0EC42E72AA5000DB4DB2 /* Follo_AITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D0EC32E72AA5000DB4DB2 /* Follo_AITests.swift */; };
 		134D0ECE2E72AA5000DB4DB2 /* Follo_AIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D0ECD2E72AA5000DB4DB2 /* Follo_AIUITests.swift */; };
 		134D0ED02E72AA5000DB4DB2 /* Follo_AIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D0ECF2E72AA5000DB4DB2 /* Follo_AIUITestsLaunchTests.swift */; };
+		13C6F0CC2F146A5600A090B5 /* AgentModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C6F0C82F146A5600A090B5 /* AgentModels.swift */; };
+		13C6F0CD2F146A5600A090B5 /* ABOrchestrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C6F0C92F146A5600A090B5 /* ABOrchestrator.swift */; };
+		13C6F0CE2F146A5600A090B5 /* AgentBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C6F0CA2F146A5600A090B5 /* AgentBService.swift */; };
+		13C6F0CF2F146A5600A090B5 /* AgentAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C6F0CB2F146A5600A090B5 /* AgentAService.swift */; };
+		13C6F0D22F146A6900A090B5 /* DashScopeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C6F0D02F146A6900A090B5 /* DashScopeClient.swift */; };
+		13C6F0D32F146A6900A090B5 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C6F0D12F146A6900A090B5 /* AppConfig.swift */; };
 		A1B2C3D405E6478F90120394 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F5E678912345AB67890123 /* OpenAIService.swift */; };
 		C2250FCA2E6EE4A1002BC625 /* AssistantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2250FC72E6EE4A1002BC625 /* AssistantsView.swift */; };
 		C2250FCB2E6EE4A1002BC625 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2250FC92E6EE4A1002BC625 /* StatusView.swift */; };
@@ -76,6 +82,12 @@
 		134D0ECD2E72AA5000DB4DB2 /* Follo_AIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follo_AIUITests.swift; sourceTree = "<group>"; };
 		134D0ECF2E72AA5000DB4DB2 /* Follo_AIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follo_AIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		13C5585B2E5960E200FDD2EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		13C6F0C82F146A5600A090B5 /* AgentModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentModels.swift; sourceTree = "<group>"; };
+		13C6F0C92F146A5600A090B5 /* ABOrchestrator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABOrchestrator.swift; sourceTree = "<group>"; };
+		13C6F0CA2F146A5600A090B5 /* AgentBService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentBService.swift; sourceTree = "<group>"; };
+		13C6F0CB2F146A5600A090B5 /* AgentAService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentAService.swift; sourceTree = "<group>"; };
+		13C6F0D02F146A6900A090B5 /* DashScopeClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashScopeClient.swift; sourceTree = "<group>"; };
+		13C6F0D12F146A6900A090B5 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		13E06B5D2E71EE170009BF9F /* Follo AI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Follo AI.entitlements"; sourceTree = "<group>"; };
 		8C950AE81E1744078140E88D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A6H8I9J901234EFG56789012 /* TimeZoneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneManager.swift; sourceTree = "<group>"; };
@@ -242,6 +254,10 @@
 		C27B69DF2EB8C55D00767FB8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				13C6F0C92F146A5600A090B5 /* ABOrchestrator.swift */,
+				13C6F0CB2F146A5600A090B5 /* AgentAService.swift */,
+				13C6F0CA2F146A5600A090B5 /* AgentBService.swift */,
+				13C6F0C82F146A5600A090B5 /* AgentModels.swift */,
 				C27B69EC2EBF45B100767FB8 /* ReminderService.swift */,
 				C27B69DE2EB8C55D00767FB8 /* EventSyncManager.swift */,
 			);
@@ -275,6 +291,8 @@
 		C2C64C8C2EB257C100353346 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				13C6F0D12F146A6900A090B5 /* AppConfig.swift */,
+				13C6F0D02F146A6900A090B5 /* DashScopeClient.swift */,
 				C2C64C8B2EB257C100353346 /* BackendAPIService.swift */,
 			);
 			path = Network;
@@ -418,6 +436,7 @@
 				C27B69EB2EBF458400767FB8 /* AppDelegate.swift in Sources */,
 				134D0EB52E72AA4F00DB4DB2 /* ContentView.swift in Sources */,
 				C29CD4BA2E7EF86400C09667 /* GlobalEventStore.swift in Sources */,
+				13C6F0D32F146A6900A090B5 /* AppConfig.swift in Sources */,
 				C2FEA34B2EE299210077A383 /* TriggerDebugView.swift in Sources */,
 				F8BC4C09315F4BACB21F3FF8 /* DataManager.swift in Sources */,
 				C27B69ED2EBF45B100767FB8 /* ReminderService.swift in Sources */,
@@ -427,13 +446,18 @@
 				L5A7B9C8345E678F90234567 /* LocationService.swift in Sources */,
 				C253EB342E87EF5A007AE00A /* EventLocator.swift in Sources */,
 				A1B2C3D405E6478F90120394 /* OpenAIService.swift in Sources */,
+				13C6F0CD2F146A5600A090B5 /* ABOrchestrator.swift in Sources */,
 				V1C2D3E456F789AB01234567 /* VoiceChatService.swift in Sources */,
 				X3E5F6G678901BCD23456789 /* VoiceChatView.swift in Sources */,
+				13C6F0CF2F146A5600A090B5 /* AgentAService.swift in Sources */,
+				13C6F0CC2F146A5600A090B5 /* AgentModels.swift in Sources */,
 				C2250FCA2E6EE4A1002BC625 /* AssistantsView.swift in Sources */,
 				C2C64C8D2EB257C100353346 /* BackendAPIService.swift in Sources */,
 				C2250FCB2E6EE4A1002BC625 /* StatusView.swift in Sources */,
 				C2C64C3A2EB0A4D700353346 /* LoginView.swift in Sources */,
+				13C6F0D22F146A6900A090B5 /* DashScopeClient.swift in Sources */,
 				C2FEA3492EE298330077A383 /* TokenRefreshManager.swift in Sources */,
+				13C6F0CE2F146A5600A090B5 /* AgentBService.swift in Sources */,
 				C27B69D62EB34E5700767FB8 /* KeychainService.swift in Sources */,
 				C2C64C3B2EB0A4D700353346 /* UserSession.swift in Sources */,
 				C27B69E02EB8C55D00767FB8 /* EventSyncManager.swift in Sources */,

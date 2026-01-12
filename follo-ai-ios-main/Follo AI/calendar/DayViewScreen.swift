@@ -219,6 +219,7 @@ private struct WeekHeader: View {
         return f.string(from: date)
     }
 
+    @MainActor
     private func hasEvents(on date: Date) -> Bool {
         let comps = Calendar.current.dateComponents([.year, .month, .day], from: date)
         return (provider.eventsByDay[comps] ?? []).isEmpty == false

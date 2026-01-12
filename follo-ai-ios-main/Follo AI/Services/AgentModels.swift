@@ -10,19 +10,25 @@ import Foundation
 // MARK: - Agent A 输出模型
 
 /// 上下文标签
-struct ContextTag: Codable, Identifiable {
-    let key: String
-    let label: String
-    let confidence: Double?
-    
-    var id: String { key }
-    
+public struct ContextTag: Codable, Identifiable {
+    public let key: String
+    public let label: String
+    public let confidence: Double?
+
+    public var id: String { key }
+
     /// 格式化显示
-    var displayText: String {
+    public var displayText: String {
         if let conf = confidence {
             return "\(label) (\(Int(conf * 100))%)"
         }
         return label
+    }
+
+    public init(key: String, label: String, confidence: Double?) {
+        self.key = key
+        self.label = label
+        self.confidence = confidence
     }
 }
 
@@ -66,16 +72,16 @@ struct AgentAResult: Codable {
 // MARK: - Agent B 输出模型
 
 /// 通知项
-struct NotificationItem: Codable, Identifiable {
-    let title: String
-    let body: String?
-    let severity: String?
-    let actions: [String]?
-    
-    var id: String { title + (body ?? "") }
-    
+public struct NotificationItem: Codable, Identifiable {
+    public let title: String
+    public let body: String?
+    public let severity: String?
+    public let actions: [String]?
+
+    public var id: String { title + (body ?? "") }
+
     /// 严重程度图标
-    var severityIcon: String {
+    public var severityIcon: String {
         switch severity?.lowercased() {
         case "high", "urgent":
             return "🔴"
@@ -86,6 +92,13 @@ struct NotificationItem: Codable, Identifiable {
         default:
             return "ℹ️"
         }
+    }
+
+    public init(title: String, body: String?, severity: String?, actions: [String]?) {
+        self.title = title
+        self.body = body
+        self.severity = severity
+        self.actions = actions
     }
 }
 
@@ -176,25 +189,28 @@ struct AgentParse {
     }
     
     // MARK: - 专用解析方法
-    
+
     /// 解析 Agent A 结果
     static func parseAgentAResult(from text: String) -> AgentAResult {
         // 尝试标准解码
         if let result = decodeJSON(from: text, as: AgentAResult.self) {
             return result
         }
-        
-        // 尝试从 JSON 字典手动构建
+
+        // 尝试从 JSON 字典手动构建（支持 DashScope 原生格式）
         let cleaned = cleanJSONWrapper(text)
         if let start = cleaned.firstIndex(of: "{"),
            let end = cleaned.lastIndex(of: "}"),
            let data = String(cleaned[start...end]).data(using: .utf8),
            let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] {
-            
-            let intent = json["intent"] as? String
+
+            // 支持标准格式和 DashScope 格式
+            let intent = (json["intent"] as? String) ?? (json["normalized_intent"] as? String)
             let rationale = json["rationale"] as? String
-            
+
             var tags: [ContextTag] = []
+
+            // 尝试解析标准 tags 格式
             if let tagsArray = json["tags"] as? [[String: Any]] {
                 tags = tagsArray.compactMap { tagDict in
                     guard let key = tagDict["key"] as? String,
@@ -203,10 +219,20 @@ struct AgentParse {
                     return ContextTag(key: key, label: label, confidence: confidence)
                 }
             }
-            
+            // 尝试解析 DashScope chips 格式
+            else if let chipsArray = json["chips"] as? [[String: Any]] {
+                tags = chipsArray.compactMap { chipDict in
+                    guard let text = chipDict["text"] as? String else { return nil }
+                    let context = chipDict["context"] as? String ?? "unknown"
+                    let confidence = chipDict["confidence"] as? Double
+                    // 将 chips 转为 ContextTag 格式
+                    return ContextTag(key: context, label: text, confidence: confidence)
+                }
+            }
+
             return AgentAResult(intent: intent, tags: tags, rationale: rationale)
         }
-        
+
         // 降级：将原始文本作为 rationale
         return AgentAResult(intent: nil, tags: [], rationale: text)
     }
